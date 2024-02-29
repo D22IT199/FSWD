@@ -44,3 +44,293 @@ is negative. Handle the error and display a custom error message.
 Task 9: Asynchronous JavaScript
 ● Write a function that uses setTimeout to simulate an asynchronous operation. Use a
 callback function to handle the result.
+
+
+
+
+
+Task-1 
+Aim: Variables and Data Types 
+Declare a variable using var, let, and const. Assign different data types to each variable and print  their values. 
+Description: The main difference between Var, Let and Const is that Var is one of the oldest  variables used in JavaScript. When we have declared one variable with Let, then it cannot be  redeclared. In Const, we cannot change the value of a variable declared by Const. 
+Source Code: 
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+<meta charset="UTF-8"> 
+<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>Document</title> 
+</head> 
+<body> 
+<script> 
+// Variable declared with var 
+var myVar = "Hello"; 
+console.log("myVar:", myVar); 
+// Variable declared with let 
+let myNum = 123; 
+console.log("myNum:", myNum); 
+// Variable declared with const 
+const myBool = "true"; 
+console.log("myBool:", myBool);
+D22IT199 1 
+IT358-FSWD CSPIT-KDPIT 
+</script> 
+</body> 
+</html> 
+Output: 
+
+Task-2 
+Aim: Operators and Expressions 
+Write a function that takes two numbers as arguments and returns their sum, difference,  product, and quotient using arithmetic operators. 
+Description: In this task, we take the value of two variables from the user and give its sum,  difference, and product as an output. 
+Source Code: 
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+<meta charset="UTF-8"> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>Document</title> 
+</head> 
+<body> 
+<script> 
+// store input numbers 
+D22IT199 2 
+IT358-FSWD CSPIT-KDPIT 
+// Jay Trambadiya 
+const num1 = parseInt(prompt('Enter the first number '));  
+const num2 = parseInt(prompt('Enter the second number '));  const sum = num1 + num2; 
+const diff = num1 - num2;  
+const product = num1 * num2; 
+const quotient = num1 / num2;  
+// display the sum  
+console.log(`The sum of ${num1} and ${num2} is ${sum}`);  
+console.log(`The difference of ${num1} and ${num2} is ${diff}`);  console.log(`The product of ${num1} and ${num2} is ${product}`);  console.log(`The quotient of ${num1} and ${num2} is ${quotient}`); </script> 
+</body> 
+</html> 
+Output: 
+
+Task-3 
+Aim: Control Flow 
+Write a program that prompts the user to enter their age. Based on their age, display different  messages: 
+● If the age is less than 18, display "You are a minor." 
+● If the age is between 18 and 65, display "You are an adult." 
+● If the age is 65 or older, display "You are a senior citizen."
+D22IT199 3 
+
+IT358-FSWD CSPIT-KDPIT 
+Description: In this task, we take the age of the user from the prompt and display if they are a  minor, adult or senior citizen. 
+Source Code: 
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+ <meta charset="UTF-8"> 
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">  <title>Document</title> 
+</head> 
+<body> 
+ <script> 
+ var age = prompt("Please input your Age") 
+ if(age<18) 
+ console.log('You are a minor') 
+ else if(age>=18 && age<65) 
+ console.log('you are an adult') 
+ else console.log('you are a senior citizen') 
+ </script> 
+  
+</body> 
+</html> 
+Output:-
+D22IT199 4 
+
+IT358-FSWD CSPIT-KDPIT 
+Task-4 
+Aim: Functions 
+Write a function that takes an array of salary as an argument and returns the min/max  salary in the array. 
+Description: In this task, we take the value of array elements and display the maximum and  minimum of those elements. 
+Source Code: 
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+<meta charset="UTF-8"> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>Document</title> 
+</head> 
+<body> 
+<script> 
+function findMinMax() { 
+var myinputarr = []; 
+var size = 5; // Array size 
+for(var a=0; a<size; a++) 
+// Jay Trambadiya 
+{  
+myinputarr[a] = prompt('Enter array Element ' + (a+1)); 
+} 
+let minValue = Math.min(...myinputarr); 
+let maxValue = Math.max(...myinputarr); 
+console.log(myinputarr); 
+console.log("Minimum salary is:" + minValue); 
+console.log("Maximum salary is:" + maxValue); 
+} 
+findMinMax() 
+</script> 
+</body> 
+</html>
+D22IT199 5 
+IT358-FSWD CSPIT-KDPIT 
+Output: 
+
+Task-5 
+Aim: Arrays and Objects 
+Create an array of your favorite books. Write a function that takes the array as an argument and  displays each book title on a separate line. 
+Description: 
+In this task, we take the value of array elements in the form of book names and display one per  line. 
+Source Code: 
+<script> 
+const favoriteBooks = [ 
+"Jay Trambadiya", 
+"D22IT199", 
+"CSPIT", 
+];// JAY TRAMBADIYA 
+function displayBookTitles(books) { 
+for (let i = 0; i < books.length; i++) { 
+console.log(books[i]); 
+} 
+} 
+displayBookTitles(favoriteBooks);  
+</script> 
+<script> 
+const favoriteBooks = [ 
+"Jay Trambadiya",
+D22IT199 6 
+IT358-FSWD CSPIT-KDPIT 
+"D22IT199", 
+"CSPIT", 
+];// JAY TRAMBADIYA 
+function displayBookTitles(books) { 
+Output: 
+
+Task-6 
+Aim: Scope and Hoisting 
+Declare a variable inside a function and try to access it outside the function. Observe the  scope behavior and explain the results. [var vs let vs const] 
+Description: In this task, we have to declare a variable inside any function and we have to try  to access it outside of the function. We have to check different results that come from var, let,  and const. 
+Source Code: 
+<script> 
+function myFunction() { 
+var x = 10; 
+let y = 20; 
+const z = 30; 
+console.log(x); 
+console.log(y); 
+console.log(z);
+D22IT199 7 
+IT358-FSWD CSPIT-KDPIT 
+} 
+myFunction(); 
+console.log(x); 
+console.log(y); 
+console.log(z); 
+</script> 
+Output: 
+
+Task 7 
+Aim: DOM Manipulation 
+Create an HTML page with a button. Write JavaScript code that adds an event listener to the  button and changes its text when clicked. 
+Description: 
+We have to create button in html and have to make it responsive when clicked using the  javascript event listener and change its text. 
+Source Code: 
+<!DOCTYPE html> 
+<html lang="en"> 
+<head>
+D22IT199 8 
+IT358-FSWD CSPIT-KDPIT 
+<meta charset="UTF-8"> 
+<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>Document</title> 
+</head> 
+<body> 
+<button id="myButton">Click me</button> 
+<script> 
+document.addEventListener('DOMContentLoaded', function() { 
+var button = document.getElementById('myButton'); 
+button.addEventListener('click', function() { 
+button.innerText = 'Button Clicked!'; 
+}); 
+}); 
+</script> 
+</body> 
+</html> 
+Output:- 
+
+
+Task 8 
+Aim: Error Handling 
+Write a function that takes a number as an argument and throws an error if the number  is negative. Handle the error and display a custom error message. 
+Description: 
+In this task, we have to create a function that takes a number as an argument and throws an error  if the number is not positive.
+D22IT199 9 
+IT358-FSWD CSPIT-KDPIT 
+Source Code: 
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+<meta charset="UTF-8"> 
+<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>Document</title> 
+</head> 
+<body> 
+<script> 
+function checkNumber(number) { 
+if (number < 0) { 
+throw new Error(number +' Number cannot be negative. '); } 
+console.log('The number is:', number); 
+} 
+try { 
+checkNumber(5); 
+checkNumber(-10); 
+} catch (error) { 
+console.log('Error:', error.message); 
+} 
+</script> 
+</body> 
+</html> 
+Output:-
+D22IT199 10 
+IT358-FSWD CSPIT-KDPIT 
+Task 9 
+Aim: Asynchronous JavaScript 
+Write a function that uses setTimeout to simulate an asynchronous operation. Use a  callback function to handle the result. 
+Description: 
+With the help of javascript, create a function that uses settimeout to simulate an  asynchronous operation. 
+Source Code: 
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+<meta charset="UTF-8"> 
+<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>Document</title> 
+</head> 
+<body> 
+<script> 
+function simulateAsyncOperation(callback) { 
+setTimeout(function() { 
+// Simulating an asynchronous operation 
+var result = 42; // Or any other value
+D22IT199 11 
+IT358-FSWD CSPIT-KDPIT 
+// Call the callback function with the result 
+callback(result); 
+}, 2000); // Simulating a delay of 2 seconds 
+} 
+// Example usage 
+console.log('Start'); 
+simulateAsyncOperation(function(result) { 
+console.log('Async operation completed with result:', result); }); 
+console.log('End'); 
+</script> 
+</body> 
+</html> 
+Output:- 
+
+Course Outcome: 
+Upon completing this course, I am able to understand and apply fundamental  concepts of JavaScript, including variables, data types, control flow, functions, 
+D22IT199 12 
+IT358-FSWD CSPIT-KDPIT 
+arrays, objects, error handling, asynchronous programming, DOM manipulation,  and scope. I gain practical skills in JavaScript programming and be able to develop  interactive web applications. 
+Conclusion: In this practical, we have learned the logical concept of various  javascript topics.
